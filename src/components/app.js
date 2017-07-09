@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import Header from './header';
+import NavBar from './commons/header';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        {this.props.children}
+        <NavBar />
+        <div className="container">
+            {this.props.children}
+        </div>
       </div>
     );
   }
 }
+
+App.propTypes = {
+    children: React.PropTypes.element.isRequired
+};
+
+export default App;

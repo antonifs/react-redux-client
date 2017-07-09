@@ -17,7 +17,6 @@ const renderInput = (field) => {
 
 class Signup extends Component {
     handleFormSubmit(formProps) {
-        // Call action creator to sign up the user
         this.props.signupUser(formProps);
     }
 
