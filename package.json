@@ -1,5 +1,5 @@
 {
-  "name": "React Redux",
+  "name": "React-Redux",
   "version": "1.0.0",
   "description": "Simple Redux with React and Babel support",
   "main": "index.js",

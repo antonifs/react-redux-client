@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
-import  from '../../actions';
 
 const products = [{
                         id: 1,
-                        name: "Product1",
-                        price: 120
+                        name: "John Doe",
+                        date_submitted: "2017-02-02"
                     }, 
                     {
                         id: 2,
-                        name: "Product2",
-                        price: 80
+                        name: "Jane Doe",
+                        date_submitted: "2017-02-02"
                     }];
 
 class BankOfResume extends Component {
@@ -22,13 +21,14 @@ class BankOfResume extends Component {
     }
 
     render () {
+
         return (
             <div>
-                <h2> List of Resumes  </h2>
+                <h2> Resume  </h2>
                 <BootstrapTable data={products} striped hover>
-                    <TableHeaderColumn isKey dataField='id'>Product ID</TableHeaderColumn>
-                    <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
-                    <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
+                    <TableHeaderColumn isKey dataField='id'>ID</TableHeaderColumn>
+                    <TableHeaderColumn dataField='name'>Name</TableHeaderColumn>
+                    <TableHeaderColumn dataField='date_submitted'>Date Submitted</TableHeaderColumn>
                 </BootstrapTable>
             </div>
         );
